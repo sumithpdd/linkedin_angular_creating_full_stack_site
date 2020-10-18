@@ -27,3 +27,7 @@ npm run dev
 ## Error handing in HAPI
 
 npm install @hapi/boom
+
+## install mysql
+
+npm i mysql

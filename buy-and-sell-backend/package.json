@@ -12,7 +12,8 @@
     "license": "ISC",
     "dependencies": {
         "@hapi/boom": "^9.1.0",
-        "@hapi/hapi": "^20.0.1"
+        "@hapi/hapi": "^20.0.1",
+        "mysql": "^2.18.1"
     },
     "devDependencies": {
         "@babel/core": "^7.12.3",
