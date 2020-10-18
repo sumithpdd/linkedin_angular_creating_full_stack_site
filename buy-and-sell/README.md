@@ -23,3 +23,5 @@ ng g c my-listings-page
 
 ng serve -o
 <http://localhost:4200/listings/123>
+
+ng g c listing-data-form
