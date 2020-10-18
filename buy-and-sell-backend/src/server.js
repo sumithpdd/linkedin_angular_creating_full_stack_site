@@ -1,27 +1,14 @@
 import Hapi from '@hapi/hapi';
+import routes from './routes';
 
-const start = async() => {
+const start = async () => {
     const server = Hapi.server({
         port: 8000,
         host: 'localhost',
     });
 
-    // server.route({
-    //     method: 'GET',
-    //     path: '/hello',
-    //     handler: (req, h) => {
-    //         return 'Hello!';
-    //     }
-    // });
-    server.route({
-        method: 'POST',
-        path: '/hello',
-        handler: (req, h) => {
-            const payload = req.payload;
-            const name = payload.name;
-            return `Hello ${name}!`;
-        }
-    });
+    routes.forEach(route => server.route(route));
+
     await server.start();
     console.log(`Server is listening on ${server.info.uri}`);
 }

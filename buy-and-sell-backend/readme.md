@@ -14,3 +14,16 @@ npm install --save-dev @babel/core @babel/node @babel/preset-env and @babel/plug
 
 npx babel-node .\src\server.js
 <http://localhost:8000/hello>
+
+## Automatically restart server on change
+
+npm i nodemon
+npx nodemon --exec npx babel-node .\src\server.js
+
+## change package.json scripts
+
+npm run dev
+
+## Error handing in HAPI
+
+npm install @hapi/boom

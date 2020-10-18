@@ -1,22 +1,25 @@
 {
-  "name": "buy-and-sell-backend",
-  "version": "1.0.0",
-  "description": "npm init -y",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@hapi/hapi": "^20.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/node": "^7.12.1",
-    "@babel/plugin-transform-runtime": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "and": "0.0.3"
-  }
+    "name": "buy-and-sell-backend",
+    "version": "1.0.0",
+    "description": "npm init -y",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --exec babel-node src/server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/boom": "^9.1.0",
+        "@hapi/hapi": "^20.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/node": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.12.1",
+        "and": "0.0.3",
+        "nodemon": "^2.0.5"
+    }
 }
