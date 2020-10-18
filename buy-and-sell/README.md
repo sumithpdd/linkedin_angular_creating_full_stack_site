@@ -25,3 +25,5 @@ ng serve -o
 <http://localhost:4200/listings/123>
 
 ng g c listing-data-form
+
+ng g c nav-bar
