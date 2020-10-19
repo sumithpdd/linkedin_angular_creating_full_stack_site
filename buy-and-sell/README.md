@@ -43,4 +43,8 @@ In order to make network requests in Angular, there are two main tools we need t
 ng serve --proxy-config .\proxy.config.json
 
 updated package.json to include this command
-now use nmp start
+now use npm start
+
+## Add angular firebase to project
+
+npm install @angular/fire firebase

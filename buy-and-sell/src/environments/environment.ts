@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyB1PLYTzXSPTCz9vq2_ykk9270y_p8eFLI",
+    authDomain: "todo-flutter-8a80f.firebaseapp.com",
+    databaseURL: "https://todo-flutter-8a80f.firebaseio.com",
+    projectId: "todo-flutter-8a80f",
+    storageBucket: "todo-flutter-8a80f.appspot.com",
+    messagingSenderId: "965292851106",
+    appId: "1:965292851106:web:161f37cc25cdd4506dfcfb",
+    measurementId: "G-C2NGFBS6PN"
+  }
 };
 
 /*

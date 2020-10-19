@@ -35,3 +35,7 @@ npm i mysql
 ## install uuid
 
 npm install uuid
+
+## Add angular firebase to project
+
+npm install firebase-admin
