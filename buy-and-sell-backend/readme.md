@@ -31,3 +31,7 @@ npm install @hapi/boom
 ## install mysql
 
 npm i mysql
+
+## install uuid
+
+npm install uuid
