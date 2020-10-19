@@ -27,3 +27,9 @@ ng serve -o
 ng g c listing-data-form
 
 ng g c nav-bar
+
+## Create services for communicating with our server
+
+ng g s listings
+
+ng serve -o
