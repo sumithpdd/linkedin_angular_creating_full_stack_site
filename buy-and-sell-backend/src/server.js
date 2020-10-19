@@ -1,8 +1,11 @@
+import dotenv from 'dotenv';
 import Hapi from '@hapi/hapi';
 import * as admin from 'firebase-admin';
 import routes from './routes';
 import { db } from './database';
 import credentials from '../credentials.json';
+
+dotenv.config();
 
 admin.initializeApp({
     credential: admin.credential.cert(credentials),
@@ -10,12 +13,15 @@ admin.initializeApp({
 
 let server;
 
-const start = async () => {
+const start = async() => {
+    // server = Hapi.server({
+    //     port: 8000,
+    //     host: 'localhost',
+    // });
     server = Hapi.server({
-        port: 8000,
-        host: 'localhost',
+        port: 8080,
+        host: '0.0.0.0',
     });
-
     routes.forEach(route => server.route(route));
 
     db.connect();
@@ -28,7 +34,7 @@ process.on('unhandledRejection', err => {
     process.exit(1);
 });
 
-process.on('SIGINT', async () => {
+process.on('SIGINT', async() => {
     console.log('Stopping server...');
     await server.stop({ timeout: 10000 });
     db.end();

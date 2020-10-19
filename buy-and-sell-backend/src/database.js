@@ -1,21 +1,19 @@
 import mysql from 'mysql';
 
 let connection;
-
+// host: '',
+// port: 3306,
+// user: 'hapi-server',
+// password: '',
+// database: 'buy-and-sell',
 export const db = {
     connect: () => {
         connection = mysql.createConnection({
-            host: 'localhost',
-            port: 3306,
-            user: 'root',
-            password: 'password',
-            database: 'buy-and-sell',
-
-            // host: process.env.DB_HOST,
-            // user: process.env.DB_USER,
-            // password: process.env.DB_PASS,
-            // database: process.env.DB_NAME,
-            // socketPath: process.env.DB_SOCKET,
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            database: process.env.DB_NAME,
+            socketPath: process.env.DB_SOCKET,
         });
         connection.connect();
     },

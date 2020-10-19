@@ -39,3 +39,15 @@ npm install uuid
 ## Add angular firebase to project
 
 npm install firebase-admin
+
+## use environment file
+
+npm i dotenv
+modify .env file
+
+## for deployment
+
+npm install @babel/cli --savedev
+
+npm run build
+gcloud app deploy

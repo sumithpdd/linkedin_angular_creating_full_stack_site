@@ -10,3 +10,15 @@ node-v
 npm install -g @angular Cli
 
 ng new buy-and-sell
+
+## To deploy
+
+http://console.cloud.google.com/
+
+(New-Object Net.WebClient).DownloadFile("https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe", "$env:Temp\GoogleCloudSDKInstaller.exe")
+
+& $env:Temp\GoogleCloudSDKInstaller.exe
+
+gcloud init
+
+gcloud config get-value project

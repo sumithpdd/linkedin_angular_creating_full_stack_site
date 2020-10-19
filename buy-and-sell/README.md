@@ -48,3 +48,7 @@ now use npm start
 ## Add angular firebase to project
 
 npm install @angular/fire firebase
+
+## deployment
+
+ng build
