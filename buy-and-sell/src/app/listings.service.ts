@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { fakeListings } from './fake-data';
 import { Listing } from './types';
 
@@ -7,9 +9,11 @@ import { Listing } from './types';
 })
 export class ListingsService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
 
-  getListings(): Listing[] {
-    return fakeListings;
+  getListings(): Observable<Listing[]> {
+    return this.http.get<Listing[]>('/api/listings');
   }
 }
