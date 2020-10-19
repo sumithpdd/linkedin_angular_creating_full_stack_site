@@ -1,5 +1,5 @@
 import { db } from '../database';
-
+// http://localhost:8000/api/listings/d653306f-bde4-46ec-b6d7-d4b976c48725
 export const updateListingRoute = {
     method: 'POST',
     path: '/api/listings/{id}',
